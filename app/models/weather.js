@@ -10,5 +10,22 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.icon = data.weather[0].icon
+    this.description = data.weather[0].description
+    this.farenheit = Math.floor(data.main.temp * 9 / 5 - 459.67)
+    this.celcius = Math.floor(data.main.temp - 273.15)
   }
+
+  get Template() {
+    return `
+    <div class="col text-center">
+    <h2 class="text-strong">${this.city}</h2>
+    <h2>${this.farenheit}&#176 F</h2>
+    <h5 class= "text-strong"style="text-transform: uppercase">${this.description}</h5>
+    <p class= "text-strong" style="text-transform: uppercase">Farenheit <span>|</span> Celcius 
+    </div>
+    `
+
+  }
+
 }
