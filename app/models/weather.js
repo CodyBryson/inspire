@@ -20,9 +20,9 @@ export default class Weather {
     return `
     <div class="col text-center">
     <h2 class="text-strong">${this.city}</h2>
-    <h2>${this.farenheit}&#176 F</h2>
+    <h2><span id="temptype">${this.farenheit}</span>&#176 <span id="templetter">F</span></h2>
     <h5 class= "text-strong"style="text-transform: uppercase">${this.description}</h5>
-    <p class= "text-strong" style="text-transform: uppercase">Farenheit <span>|</span> Celcius 
+    <p class= "text-strong temptoggle" style="text-transform: uppercase"onclick="app.weatherController.getFar()">Farenheit <span>|</span></p><p class="text-strong temptoggle" style="text-transform: uppercase"onclick="app.weatherController.getCel() <span class="temptoggle" onclick="app.weatherController.getCel()">Celcius </span>
     </div>
     `
 

@@ -10,8 +10,22 @@ function drawWeather() {
   let template = ProxyState.weather.Template
   document.getElementById('weather').innerHTML = template
 }
-var clock = new Date();
-document.getElementById("time").innerHTML = clock.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+function getFar() {
+  document.getElementById('temptype').innerText = (`${ProxyState.weather.farenheit}`);
+  document.getElementById('templetter').innerText = ('F');
+}
+function getCel() {
+  document.getElementById('temptype').innerText = (`${ProxyState.weather.celcius}`);
+  document.getElementById('templetter').innerText = ('C');
+}
+
+function drawClock() {
+  var clock = new Date();
+  document.getElementById("time").innerHTML = clock.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+}
+drawClock();
+setInterval(drawClock, 1000);
 
 export default class WeatherController {
   constructor() {

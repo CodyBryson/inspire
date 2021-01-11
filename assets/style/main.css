@@ -61,15 +61,16 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #f2f2f2;
-  background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80);
-  background-size: cover;
+  
 }
+
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
-
+.backgroundSize{
+  background-size: cover;
+}
 hr {
   box-sizing: content-box;
   height: 0;
