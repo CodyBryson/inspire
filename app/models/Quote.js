@@ -9,8 +9,8 @@ export default class Quote {
 
   get Template() {
     return `
-  <h5 class="text-light">"${this.body}"</h5>
-  <p class="text-light">${this.author}</p>
+  <h5 class="text-light hoverquote">"${this.body}"</h5>
+  <p class="text-light hide">${this.author}</p>
   `
   }
 }

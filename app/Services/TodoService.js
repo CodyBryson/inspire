@@ -29,8 +29,15 @@ class TodoService {
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
+    if (todo.completed == true) {
+      todo.completed = false
+    } else if (todo.completed == false) {
+      todo.completed = true;
+    }
 
-    let res = await api.put(url + todoId, todo);
+    let res = await api.put(url + todoId, todo)
+    // this.getTodos()
+
     //TODO how do you trigger this change
   }
 

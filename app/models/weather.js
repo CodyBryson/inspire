@@ -19,11 +19,11 @@ export default class Weather {
   get Template() {
     return `
     <div class="col text-center">
-    <h2 class="text-strong">${this.city}</h2>
+    <h2 class="text-strong fancyfont">${this.city}</h2>
     <h2><span id="temptype">${this.farenheit}</span>&#176 <span id="templetter">F</span></h2>
-    <h5 class= "text-strong"style="text-transform: uppercase">${this.description}</h5>
-    <p class= "text-strong cursor-pointer" style="text-transform: uppercase"onclick="app.weatherController.tempToggle('F')">Farenheit <span>|</span></p>
-    <p class="text-strong cursor-pointer" style="text-transform: uppercase"onclick="app.weatherController.tempToggle('C')">Celcius</p> 
+    <h5 class= "text-strong fancyfont"style="text-transform: uppercase">${this.description}</h5>
+    <p class= "text-strong" style="cursor: pointer;text-transform: uppercase"onclick="app.weatherController.tempToggle('F')">Farenheit <span>|</span></p>
+    <p class="text-strong" style="cursor:pointer; text-transform: uppercase"onclick="app.weatherController.tempToggle('C')">Celcius</p> 
     </div>
     `
 

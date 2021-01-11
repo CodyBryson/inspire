@@ -30,10 +30,14 @@ export default class WeatherController {
   }
   tempToggle(str) {
     console.log("Toggling")
-    if (str = 'F') {
+    if (str == 'F') {
+      console.log("F")
       document.getElementById("temptype").innerHTML = (`${ProxyState.weather.farenheit}`)
-    } else if (str = 'C') {
+      document.getElementById("templetter").innerHTML = "F"
+    } else if (str == 'C') {
+      console.log("C")
       document.getElementById("temptype").innerHTML = (`${ProxyState.weather.celcius}`)
+      document.getElementById("templetter").innerHTML = "C"
     }
   }
   getWeather() {
