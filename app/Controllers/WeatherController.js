@@ -20,13 +20,7 @@ function drawClock() {
 drawClock();
 setInterval(drawClock, 1000);
 
-// function tempToggle(str) {
-//   if (str = "F") {
-//     document.getElementById("temptype").innerHTML = (`${ProxyState.weather.farenheit}`)
-//   } else {
-//     document.getElementById("temptype").innerHTML = (`${ProxyState.weather.celcius}`)
-//   }
-// }
+
 
 
 export default class WeatherController {
@@ -34,7 +28,14 @@ export default class WeatherController {
     ProxyState.on("weather", drawWeather);
     this.getWeather()
   }
-
+  tempToggle(str) {
+    console.log("Toggling")
+    if (str = 'F') {
+      document.getElementById("temptype").innerHTML = (`${ProxyState.weather.farenheit}`)
+    } else if (str = 'C') {
+      document.getElementById("temptype").innerHTML = (`${ProxyState.weather.celcius}`)
+    }
+  }
   getWeather() {
     try {
       weatherService.getWeather()

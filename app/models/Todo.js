@@ -1,9 +1,9 @@
 import { generateId } from "../Utils/GenerateId.js"
 
 export default class Todo {
-  constructor({ id, name, completed }) {
+  constructor({ id, description, completed }) {
     this.id = id || generateId(),
-      this.name = name
+      this.description = description
     this.completed = false || completed
   }
 
@@ -11,7 +11,8 @@ export default class Todo {
     return `
     <label class="form-check-label text-light m-2">
                                 <input class="form-check-input" type="checkbox" name="taskCheck" id="${this.id}"
-                                    value="checkedValue">${this.name}</label> <i class="fas fa-ban cusor-pointer m-1"onclick="app.todoController.delete('${this.id}')"></i>
+                                    value="checkedValue">${this.description}</label> 
+                                    <i class="fa fa-times-circle text-danger cursor-pointer p-2" onclick="app.todoController.removeTodo('${this.id}')" aria-hidden="true"></i>
     `
   }
 }

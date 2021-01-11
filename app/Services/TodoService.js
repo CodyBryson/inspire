@@ -38,10 +38,10 @@ class TodoService {
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, how do you update the state
-    let res = api.delete(todoId)
+    let res = api.delete(url + todoId)
     ProxyState.todos = ProxyState.todos.filter(t => t.id != todoId)
 
-    this.getTodos()
+
   }
 }
 

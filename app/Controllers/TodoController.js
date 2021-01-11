@@ -31,7 +31,7 @@ export default class TodoController {
     var form = window.event.target;
     //TODO build the todo object from the data that comes into this method
     let newTodo = {
-      name: form['name'].value
+      description: form['name'].value
     };
     try {
       todoService.addTodo(newTodo);
