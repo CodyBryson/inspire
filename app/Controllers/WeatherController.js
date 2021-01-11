@@ -10,14 +10,7 @@ function drawWeather() {
   let template = ProxyState.weather.Template
   document.getElementById('weather').innerHTML = template
 }
-function getFar() {
-  document.getElementById('temptype').innerText = (`${ProxyState.weather.farenheit}`);
-  document.getElementById('templetter').innerText = ('F');
-}
-function getCel() {
-  document.getElementById('temptype').innerText = (`${ProxyState.weather.celcius}`);
-  document.getElementById('templetter').innerText = ('C');
-}
+
 
 function drawClock() {
   var clock = new Date();
@@ -26,6 +19,15 @@ function drawClock() {
 }
 drawClock();
 setInterval(drawClock, 1000);
+
+// function tempToggle(str) {
+//   if (str = "F") {
+//     document.getElementById("temptype").innerHTML = (`${ProxyState.weather.farenheit}`)
+//   } else {
+//     document.getElementById("temptype").innerHTML = (`${ProxyState.weather.celcius}`)
+//   }
+// }
+
 
 export default class WeatherController {
   constructor() {

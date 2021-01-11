@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js";
+import Todo from "../Models/Todo.js";
 import todoService from "../Services/TodoService.js";
 
 //TODO Create the draw function
@@ -25,15 +26,17 @@ export default class TodoController {
       console.error(error)
     }
   }
-  addTodo(e) {
-    e.preventDefault();
-    var form = e.target;
+  addTodo() {
+    window.event.preventDefault();
+    var form = window.event.target;
     //TODO build the todo object from the data that comes into this method
-    var todo = {
+    let newTodo = {
       name: form['name'].value
     };
     try {
-      todoService.addTodo(todo);
+      todoService.addTodo(newTodo);
+      //@ts-ignore
+      form.reset()
     } catch (error) {
       console.error(error)
     }
